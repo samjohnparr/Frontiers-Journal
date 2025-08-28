@@ -8,13 +8,10 @@
   <link rel="preload" href="assets/css/styles.css" as="style">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/img/fmrd-logo.png">
-  <!-- Open Graph / Twitter (optional but nice for sharing) -->
   <meta property="og:title" content="Frontiers in Multidisciplinary Research and Development">
   <meta property="og:description" content="Peer-reviewed open access journal spanning science, engineering, health, social sciences, and the humanities.">
   <meta property="og:image" content="assets/img/fmrd-logo.png">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Structured data: Journal + Publisher (customize as you finalize) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,7 +34,7 @@
   <!-- Header & global nav -->
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/">
+      <a class="brand" href="index.html">
         <img src="assets/img/fmrd-logo.png" alt="FMRD logo" class="brand__logo">
         <div class="brand__text">
           <span class="brand__title">Frontiers in Multidisciplinary Research and Development</span>
@@ -45,18 +42,18 @@
         </div>
       </a>
 
-      <!-- Mobile-friendly nav (CSS only) -->
       <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-label="Toggle navigation">
       <label for="nav-toggle" class="nav__burger" aria-hidden="true"><span></span></label>
 
       <nav class="nav" aria-label="Primary">
         <ul>
-          <li><a href="#aims">Aims &amp; Scope</a></li>
-          <li><a href="#current-issue">Current Issue</a></li>
-          <li><a href="#articles">Articles</a></li>
-          <li><a href="#editorial-board">Editorial Board</a></li>
-          <li><a href="#for-authors">For Authors</a></li>
-          <li><a href="#news">News</a></li>
+          <li><a href="aims-scope.html">Aims &amp; Scope</a></li>
+          <li><a href="current-issue.html">Current Issue</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="editorial-board.html">Editorial Board</a></li>
+          <li><a href="for-authors.html">For Authors</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="archive.html">Archive</a></li>
           <li><a class="btn btn--primary" href="https://example-ojs.org/index.php/fmrd/about/submissions" target="_blank" rel="noopener">Submit Manuscript</a></li>
         </ul>
       </nav>
@@ -68,7 +65,7 @@
     <div class="wrap">
       <h1>Advancing rigorous, cross-disciplinary research</h1>
       <p>FMRD publishes original research, reviews, short communications, and registered reports across science, engineering, health, social sciences, and the humanities.</p>
-      <form class="search" role="search" aria-label="Site search" action="#" method="get">
+      <form class="search" role="search" aria-label="Site search" action="articles.html" method="get">
         <label for="q" class="sr-only">Search articles</label>
         <input id="q" name="q" type="search" placeholder="Search articles, authors, keywords…" autocomplete="off">
         <button type="submit" class="btn">Search</button>
@@ -83,139 +80,68 @@
   </section>
 
   <main id="main" class="wrap">
-    <!-- Aims & Scope -->
-    <section id="aims" class="card">
-      <h2>Aims &amp; Scope</h2>
-      <p>Frontiers in Multidisciplinary Research and Development (FMRD) is committed to rapid, rigorous peer review and open access dissemination of research that advances knowledge and practice across domains. We welcome submissions in (non-exhaustive): mathematics and data science, engineering and technology, health and life sciences, environmental and earth sciences, education, economics and social sciences, arts and humanities, and policy studies. Interdisciplinary, replication, and negative-result studies are encouraged.</p>
-      <ul class="bullets">
-        <li><strong>Article types:</strong> Research Articles, Systematic Reviews, Short Communications, Registered Reports, Data Papers</li>
-        <li><strong>Peer review:</strong> Double-blind; registered reports: stage 1 + stage 2</li>
-        <li><strong>Open research:</strong> Data &amp; code availability statements required; preprint-friendly</li>
-        <li><strong>Ethics:</strong> COPE-aligned policies; ICMJE for medical research</li>
-      </ul>
+    <!-- A short teaser keeps the homepage useful; the full content lives on subpages -->
+    <section class="card">
+      <h2>Aims &amp; Scope (summary)</h2>
+      <p>FMRD advances rigorous, open research across mathematics & data science, engineering & technology, health & life sciences, environmental sciences, education, economics & social sciences, arts & humanities, and policy studies.</p>
+      <p><a class="btn btn--ghost" href="aims-scope.html">Read full Aims &amp; Scope →</a></p>
     </section>
 
     <!-- Current Issue -->
-    <section id="current-issue">
+    <section>
       <div class="section-head">
         <h2>Current Issue</h2>
         <p class="section-sub">Volume 1 • Issue 1 • 2025</p>
-        <a class="btn btn--ghost" href="#archive">View all issues</a>
+        <a class="btn btn--ghost" href="archive.html">View all issues</a>
       </div>
 
       <div class="grid grid--3">
-        <!-- Example article cards; duplicate/edit as needed -->
         <article class="article-card">
-          <a href="#" class="article-card__title">A topology-guided early-warning framework for epidemic peaks in tropical settings</a>
+          <a href="articles/article-template.html" class="article-card__title">A topology-guided early-warning framework for epidemic peaks in tropical settings</a>
           <p class="article-card__meta">Original Research • 15 Aug 2025 • <span class="doi">doi:10.xxxx/fmrd.2025.00001</span></p>
           <p class="article-card__authors">T. Lanticse, D. Comighod, H.K. Aclao, S.J.E. Parreño</p>
-          <p class="article-card__teaser">We integrate persistent homology with classical indicators to detect critical transitions weeks before observed peaks in dengue, measles, and COVID-19 time series.</p>
+          <p class="article-card__teaser">We integrate persistent homology with classical indicators to detect critical transitions weeks before observed peaks.</p>
         </article>
 
         <article class="article-card">
-          <a href="#" class="article-card__title">Grey models with persistence-landscape features for national energy forecasting</a>
+          <a href="articles/article-template.html" class="article-card__title">Grey models with persistence-landscape features for national energy forecasting</a>
           <p class="article-card__meta">Original Research • 08 Aug 2025 • <span class="doi">doi:10.xxxx/fmrd.2025.00002</span></p>
           <p class="article-card__authors">S.J.E. Parreño</p>
-          <p class="article-card__teaser">An extended GM(1,1) incorporating topological descriptors improves forecast accuracy for coal consumption and production.</p>
+          <p class="article-card__teaser">An extended GM(1,1) incorporating topological descriptors improves forecast accuracy.</p>
         </article>
 
         <article class="article-card">
-          <a href="#" class="article-card__title">STEM career interests and pathway intentions among Grade 12 learners</a>
+          <a href="articles/article-template.html" class="article-card__title">STEM career interests and pathway intentions among Grade 12 learners</a>
           <p class="article-card__meta">Education • 01 Aug 2025 • <span class="doi">doi:10.xxxx/fmrd.2025.00003</span></p>
           <p class="article-card__authors">A. Gonzaga, P.N. Baltolore, J. Estrada</p>
-          <p class="article-card__teaser">A cross-sectional study using the STEM-CIS to map interests across strands and inform school-to-university transitions.</p>
+          <p class="article-card__teaser">A cross-sectional study using the STEM-CIS to map interests and inform transitions.</p>
         </article>
       </div>
     </section>
 
-    <!-- Online First / Latest -->
-    <section id="articles" class="card">
+    <!-- Early Access -->
+    <section class="card">
       <h2>Early Access (Online First)</h2>
       <ul class="list list--articles">
         <li>
-          <a href="#">Unsupervised genetic subgroup discovery in dyslexia via UMAP–HDBSCAN</a>
+          <a href="articles/article-template.html">Unsupervised genetic subgroup discovery in dyslexia via UMAP–HDBSCAN</a>
           <span class="list__meta">Accepted 20 Aug 2025 • <span class="doi">doi:10.xxxx/fmrd.2025.00004</span></span>
         </li>
         <li>
-          <a href="#">A hearing-functions web app to support graph interpretation in General Mathematics</a>
+          <a href="articles/article-template.html">A hearing-functions web app to support graph interpretation in General Mathematics</a>
           <span class="list__meta">Accepted 14 Aug 2025 • <span class="doi">doi:10.xxxx/fmrd.2025.00005</span></span>
         </li>
       </ul>
+      <p><a class="btn btn--ghost" href="articles.html">Browse all articles →</a></p>
     </section>
 
-    <!-- Sidebar: announcements, indexing, metrics -->
-    <aside class="sidebar">
-      <section id="news" class="card">
-        <h3>News &amp; Announcements</h3>
-        <ul class="list">
-          <li><strong>Call for Papers:</strong> Special Issue on <em>Applied Topology in Data &amp; Health</em> (deadline: 30 Nov 2025).</li>
-          <li><strong>Indexing:</strong> Under evaluation for DOAJ • Crossref membership in progress • DOI registration via Crossref.</li>
-          <li><strong>Workflows:</strong> Double-blind peer review.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>Journal Information</h3>
-        <ul class="kv">
-          <li><span>ISSN</span><span>XXXX-XXXX</span></li>
-          <li><span>Publisher</span><span>FMRD Press</span></li>
-          <li><span>Country</span><span>Philippines</span></li>
-          <li><span>Language</span><span>English</span></li>
-          <li><span>Open Access</span><span>Yes (CC BY 4.0)</span></li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>For Reviewers</h3>
-        <p>Sign up to review and help advance open science.</p>
-        <a class="btn btn--ghost" href="https://example-ojs.org/index.php/fmrd/user/register" target="_blank" rel="noopener">Become a Reviewer</a>
-      </section>
-    </aside>
-
-    <!-- Editorial board snippet -->
-    <section id="editorial-board" class="card">
-      <h2>Editorial Board</h2>
-      <ul class="people">
-        <li>
-          <span class="people__name">Samuel John E. Parreño, MSc</span>
-          <span class="people__role">Editor-in-Chief • Applied Mathematics &amp; Data Science</span>
-        </li>
-        <li>
-          <span class="people__name">Tomas, Jr. A. Diquito, PhD</span>
-          <span class="people__role">Associate Editor • Education &amp; Social Sciences</span>
-        </li>
-        <li>
-          <span class="people__name">[Name], PhD</span>
-          <span class="people__role">Associate Editor • Health &amp; Life Sciences</span>
-        </li>
-        <li>
-          <span class="people__name">Editorial Board</span>
-          <span class="people__role">See full board →</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Author instructions -->
-    <section id="for-authors" class="card">
-      <h2>Instructions for Authors</h2>
-      <ol class="numbered">
-        <li>Prepare your manuscript using the FMRD template (IMRaD, APA/Harvard/Vancouver—choose one consistently).</li>
-        <li>Include an abstract (200–300 words), keywords (3–6), ethical approvals (if applicable), data/code availability statement, and funding disclosure.</li>
-        <li>Deposit data/code in a trusted repository (e.g., OSF, Zenodo, GitHub) and include persistent links.</li>
-        <li>Submit via OJS: <a href="https://example-ojs.org/index.php/fmrd/about/submissions" target="_blank" rel="noopener">Submit Manuscript</a>.</li>
-      </ol>
-      <div class="btn-row">
-        <a class="btn" href="#">Download Manuscript Template (DOCX)</a>
-        <a class="btn" href="#">Download Reference Style Guide (PDF)</a>
-      </div>
-    </section>
-
-    <!-- Archive link -->
-    <section id="archive" class="card">
-      <h2>Archive</h2>
-      <p>Browse past volumes and issues.</p>
+    <!-- Sidebar-style blocks condensed for homepage -->
+    <section class="card">
+      <h2>News &amp; Announcements</h2>
       <ul class="list">
-        <li><a href="#">Volume 1 (2025)</a></li>
+        <li><strong>Call for Papers:</strong> Special Issue on <em>Applied Topology in Data &amp; Health</em> (deadline: 30 Nov 2025).</li>
+        <li><strong>Indexing:</strong> Under evaluation for DOAJ • Crossref membership in progress.</li>
+        <li><a href="news.html">More news →</a></li>
       </ul>
     </section>
   </main>
@@ -230,10 +156,10 @@
       <div>
         <h4>Policies</h4>
         <ul>
-          <li><a href="#">Ethics &amp; Malpractice</a></li>
-          <li><a href="#">Open Access &amp; Licensing</a></li>
-          <li><a href="#">Peer Review Policy</a></li>
-          <li><a href="#">Privacy Statement</a></li>
+          <li><a href="policies/ethics.html">Ethics &amp; Malpractice</a></li>
+          <li><a href="policies/open-access.html">Open Access &amp; Licensing</a></li>
+          <li><a href="policies/peer-review.html">Peer Review Policy</a></li>
+          <li><a href="policies/privacy.html">Privacy Statement</a></li>
         </ul>
       </div>
       <div>
@@ -248,10 +174,7 @@
     <div class="wrap footer-note">
       <p>© <span id="year"></span> FMRD. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> unless otherwise stated.</p>
     </div>
-    <script>
-      // simple year stamp; safe to keep even without /assets/js
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 </body>
 </html>
