@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A topology-guided early-warning framework for epidemic peaks · FMRD</title>
+  <meta name="description" content="FMRD V1 I1: topology-guided early-warning framework using persistent homology (IMRAD).">
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+  <link rel="icon" href="../../../assets/img/fmrd-logo.png">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ScholarlyArticle",
+    "name":"A topology-guided early-warning framework for epidemic peaks in tropical settings",
+    "author":[
+      {"@type":"Person","name":"T. Lanticse"},
+      {"@type":"Person","name":"D. Comighod"},
+      {"@type":"Person","name":"H.K. Aclao"},
+      {"@type":"Person","name":"S.J.E. Parreño"}
+    ],
+    "datePublished":"2025-08-15",
+    "isPartOf":{
+      "@type":"PublicationIssue",
+      "issueNumber":"1",
+      "datePublished":"2025",
+      "isPartOf":{"@type":"PublicationVolume","volumeNumber":"1","name":"FMRD"}
+    },
+    "identifier":"doi:10.xxxx/fmrd.2025.00001",
+    "url":"https://samjohnparr.github.io/Frontiers-Journal/articles/v1i1/fmrd-2025-00001/",
+    "license":"https://creativecommons.org/licenses/by/4.0/"
+  }
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <img src="../../../assets/img/fmrd-logo.png" alt="FMRD logo" class="brand__logo">
+      <div class="brand__text">
+        <span class="brand__title">Frontiers in Multidisciplinary Research and Development</span>
+        <span class="brand__subtitle">Peer-Reviewed • Open Access</span>
+      </div>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="nav__burger" aria-hidden="true"><span></span></label>
+
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="../../../aims-scope.html">Aims &amp; Scope</a></li>
+        <li><a href="../index.html">Current Issue</a></li>
+        <li><a href="../../../articles.html" aria-current="page">Articles</a></li>
+        <li><a href="../../../editorial-board.html">Editorial Board</a></li>
+        <li><a href="../../../for-authors.html">For Authors</a></li>
+        <li><a href="../../../news.html">News</a></li>
+        <li><a href="../../../archive.html">Archive</a></li>
+        <li><a class="btn btn--primary" href="https://example-ojs.org/index.php/fmrd/about/submissions" target="_blank" rel="noopener">Submit Manuscript</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap article-page">
+  <!-- Minimal breadcrumb -->
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="../../../articles.html">Articles</a> /
+    <a href="../">Volume 1 Issue 1</a> /
+    <span aria-current="page">fmrd-2025-00001</span>
+  </nav>
+
+  <!-- Article header -->
+  <article class="card article-hero">
+    <h1>A topology-guided early-warning framework for epidemic peaks in tropical settings</h1>
+    <p class="article-card__meta">Original Research • 15 Aug 2025 • <span class="doi">doi:10.xxxx/fmrd.2025.00001</span></p>
+    <p class="article-card__authors"><strong>T. Lanticse</strong>; <strong>D. Comighod</strong>; <strong>H.K. Aclao</strong>; <strong>S.J.E. Parreño</strong></p>
+    <p>^1 Department of Mathematics and Statistics, University of Southern Mindanao, Philippines<br>
+       ^2 Department of Health, Epidemiology Unit, Philippines<br>
+       ^3 School of Applied Mathematics and Data Science, Digos City, Philippines</p>
+
+    <div class="btn-row">
+      <a class="btn" href="fmrd-2025-00001.pdf">Download PDF</a>
+      <a class="btn btn--ghost" href="../index.html">Back to Volume 1 Issue 1</a>
+    </div>
+  </article>
+
+  <!-- Large, scrollable PDF viewer -->
+  <div class="pdf-embed">
+    <iframe
+      src="fmrd-2025-00001.pdf#view=FitH"
+      title="Article PDF"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- IMRAD content -->
+  <article class="card">
+    <h2>Abstract</h2>
+    <p><strong>Background:</strong> Early warning signals (EWS) can anticipate critical transitions in infectious-disease time series, yet their performance in tropical settings with multi-annual forcing and reporting noise remains mixed. <strong>Methods:</strong> We integrate topological data analysis (TDA) with classical indicators to detect pre-peak regimes. Sliding windows are transformed into delay-embedded point clouds; we compute persistence diagrams and summarize them via persistence landscapes. Features are combined with variance, autocorrelation at lag-1, skewness, and spectral ratio, then classified by gradient boosting. We evaluate dengue, measles, and COVID-19 surveillance data from 2012–2024 across multiple regions. <strong>Results:</strong> TDA-enriched models improved F1 by 0.11–0.19 over classical EWS, with median lead times of 3–6 weeks before observed peaks. Ablations indicate homological features (H1) contribute most to precision at low prevalence. <strong>Conclusions:</strong> Topology-guided EWS can augment operational surveillance by providing earlier, more stable alarms in noisy tropical datasets.</p>
+
+    <h2>Keywords</h2>
+    <p>early warning signals; persistent homology; persistence landscapes; dengue; measles; COVID-19; tropical epidemiology</p>
+
+    <h2>Introduction</h2>
+    <p>Public-health programs rely on timely detection of epidemic upswings. Classical EWS—variance and autocorrelation—stem from critical-slowing-down theory, but real surveillance data exhibit nonstationarity, under-reporting, and calendar effects. Topological data analysis (TDA) offers complementary descriptors that capture shape changes in reconstructed dynamics. We hypothesize that persistent homology features, combined with standard indicators, yield earlier and more reliable pre-peak alarms.</p>
+
+    <h2>Methods</h2>
+    <p><em>Data:</em> Weekly case counts for dengue, measles, and COVID-19 (2012–2024). <em>Pre-processing:</em> STL de-seasonalization; log(1+x) transform. Windows: length 16 weeks, step 1.</p>
+    <p><em>Delay embedding:</em> (m=3, τ=1) into ℝ³ per window. <em>Persistent homology:</em> Vietoris–Rips up to H1; summarized by persistence landscapes (L¹ norms across fixed λ-breakpoints). <em>Classical indicators:</em> variance, AC(1), skewness, spectral ratio. <em>Classifier:</em> gradient-boosted trees with time-aware CV. <em>Outcome:</em> pre-peak window within 3–8 weeks prior to observed local maximum. Metrics: F1, AUPRC, lead-time.</p>
+    <p><em>Ablations:</em> classical-only; TDA-only; fusion; H0 vs H1 contributions.</p>
+
+    <h2>Results</h2>
+    <p><em>Performance:</em> Fusion model F1=0.72 (±0.06) vs classical-only 0.56 (±0.07), Δ=+0.16. Median lead time improved from 2→5 weeks; largest gains in dengue low-baseline seasons.</p>
+    <p><em>Feature importance:</em> H1 landscape coefficients entered top-10 features in 8/9 regions; calibration improved (ECE 0.14→0.08). <em>Case studies:</em> Davao 2019 dengue alert 5 weeks pre-peak; NCR measles 2018 alert 4 weeks pre-peak.</p>
+
+    <h2>Discussion</h2>
+    <p>TDA captures mesoscale changes in reconstructed attractors that precede incidence peaks, complementing variance- and autocorrelation-based EWS. While robustness improved, performance depends on window length and seasonal adjustment. Future work: prospective deployment in dashboards and integration with mobility/climate covariates.</p>
+
+    <h2>Data &amp; Code Availability</h2>
+    <p>Aggregated weekly series and code will be posted at a permanent OSF/Zenodo link upon acceptance.</p>
+
+    <h2>Acknowledgments</h2>
+    <p>We thank regional epidemiology units for access to de-identified surveillance series. Funding: none.</p>
+
+    <h2>Conflicts of Interest</h2>
+    <p>The authors declare no competing interests.</p>
+
+    <h2>References</h2>
+    <ol class="numbered">
+      <li>Dakos V., et al. (2012). Methods for Detecting Early Warnings of Critical Transitions. <em>PLoS ONE</em>.</li>
+      <li>Edelsbrunner H., Harer J. (2010). <em>Computational Topology: An Introduction</em>. AMS.</li>
+      <li>Bubenik P. (2015). Statistical Topological Data Analysis using Persistence Landscapes. <em>JMLR</em>.</li>
+      <li>Scheffer M., et al. (2009). Early-warning signals for critical transitions. <em>Nature</em>.</li>
+      <li>Kuehn C. (2011). A mathematical framework for critical transitions. <em>Physica D</em>.</li>
+    </ol>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Frontiers in Multidisciplinary Research and Development</h4>
+      <p>Email: <a href="mailto:editor@fmrd-journal.org">editor@fmrd-journal.org</a></p>
+    </div>
+    <div>
+      <h4>Policies</h4>
+      <ul>
+        <li><a href="../../../policies/ethics.html">Ethics &amp; Malpractice</a></li>
+        <li><a href="../../../policies/open-access.html">Open Access &amp; Licensing</a></li>
+        <li><a href="../../../policies/peer-review.html">Peer Review Policy</a></li>
+        <li><a href="../../../policies/privacy.html">Privacy Statement</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Indexing &amp; Partners</h4>
+      <ul>
+        <li>Crossref (DOIs)</li>
+        <li>DOAJ (under evaluation)</li>
+        <li>Google Scholar</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-note"><p>© <span id="year"></span> FMRD • CC BY 4.0</p></div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</footer>
+</body>
+</html>

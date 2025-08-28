@@ -1,53 +1,96 @@
 <!doctype html>
-<li>Ensure figures/tables are high‑quality (vector preferred) and have descriptive captions.</li>
-<li>Submit via OJS: <a href="https://example-ojs.org/index.php/fmrd/about/submissions" target="_blank" rel="noopener">Submit Manuscript</a>.</li>
-</ol>
-<div class="btn-row">
-<a class="btn" href="#">Download Manuscript Template (DOCX)</a>
-<a class="btn" href="#">Download Reference Style Guide (PDF)</a>
-</div>
-</section>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instructions for Authors · FMRD</title>
+  <meta name="description" content="Submission instructions, templates, and policies for authors publishing in Frontiers in Multidisciplinary Research and Development (FMRD).">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/img/fmrd-logo.png">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/img/fmrd-logo.png" alt="FMRD logo" class="brand__logo">
+      <div class="brand__text">
+        <span class="brand__title">Frontiers in Multidisciplinary Research and Development</span>
+        <span class="brand__subtitle">Peer-Reviewed • Open Access</span>
+      </div>
+    </a>
 
+    <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="nav__burger" aria-hidden="true"><span></span></label>
 
-<section class="card">
-<h2>Article Types</h2>
-<ul class="bullets">
-<li>Original Research (up to ~7000 words)</li>
-<li>Systematic Review (PRISMA‑aligned)</li>
-<li>Short Communication (~3000 words)</li>
-<li>Registered Report (Stage 1 &amp; Stage 2)</li>
-<li>Data Paper / Software Note</li>
-</ul>
-</section>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="aims-scope.html">Aims &amp; Scope</a></li>
+        <li><a href="articles/v1i1/index.html">Current Issue</a></li><!-- change to current-issue.html if you renamed -->
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="editorial-board.html">Editorial Board</a></li>
+        <li><a href="for-authors.html" aria-current="page">For Authors</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a class="btn btn--primary" href="https://example-ojs.org/index.php/fmrd/about/submissions" target="_blank" rel="noopener">Submit Manuscript</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <h1>Instructions for Authors</h1>
+    <ol class="numbered">
+      <li>Use the FMRD manuscript template (IMRaD). Choose one consistent reference style (APA, Harvard, or Vancouver).</li>
+      <li>Include abstract (200–300 words), 3–6 keywords, ethical approvals (if applicable), and funding disclosure.</li>
+      <li>Provide a data/code availability statement and deposit materials in OSF, Zenodo, or GitHub.</li>
+      <li>Ensure figures/tables are high-quality (vector preferred) and have descriptive captions.</li>
+      <li>Submit via OJS: <a href="https://example-ojs.org/index.php/fmrd/about/submissions" target="_blank" rel="noopener">Submit Manuscript</a>.</li>
+    </ol>
+    <div class="btn-row">
+      <a class="btn" href="#">Download Manuscript Template (DOCX)</a>
+      <a class="btn" href="#">Download Reference Style Guide (PDF)</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Article Types</h2>
+    <ul class="bullets">
+      <li>Original Research (up to ~7000 words)</li>
+      <li>Systematic Review (PRISMA-aligned)</li>
+      <li>Short Communication (~3000 words)</li>
+      <li>Registered Report (Stage 1 &amp; Stage 2)</li>
+      <li>Data Paper / Software Note</li>
+    </ul>
+  </section>
 </main>
 
-
 <footer class="site-footer">
-<div class="wrap footer-grid">
-<div>
-<h4>Frontiers in Multidisciplinary Research and Development</h4>
-<p>Email: <a href="mailto:editor@fmrd-journal.org">editor@fmrd-journal.org</a></p>
-</div>
-<div>
-<h4>Policies</h4>
-<ul>
-<li><a href="policies/ethics.html">Ethics &amp; Malpractice</a></li>
-<li><a href="policies/open-access.html">Open Access &amp; Licensing</a></li>
-<li><a href="policies/peer-review.html">Peer Review Policy</a></li>
-<li><a href="policies/privacy.html">Privacy Statement</a></li>
-</ul>
-</div>
-<div>
-<h4>Indexing &amp; Partners</h4>
-<ul>
-<li>Crossref (DOIs)</li>
-<li>DOAJ (under evaluation)</li>
-<li>Google Scholar</li>
-</ul>
-</div>
-</div>
-<div class="wrap footer-note"><p>© <span id="year"></span> FMRD • CC BY 4.0</p></div>
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Frontiers in Multidisciplinary Research and Development</h4>
+      <p>Email: <a href="mailto:editor@fmrd-journal.org">editor@fmrd-journal.org</a></p>
+    </div>
+    <div>
+      <h4>Policies</h4>
+      <ul>
+        <li><a href="policies/ethics.html">Ethics &amp; Malpractice</a></li>
+        <li><a href="policies/open-access.html">Open Access &amp; Licensing</a></li>
+        <li><a href="policies/peer-review.html">Peer Review Policy</a></li>
+        <li><a href="policies/privacy.html">Privacy Statement</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Indexing &amp; Partners</h4>
+      <ul>
+        <li>Crossref (DOIs)</li>
+        <li>DOAJ (under evaluation)</li>
+        <li>Google Scholar</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-note"><p>© <span id="year"></span> FMRD • CC BY 4.0</p></div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </footer>
 </body>
 </html>
