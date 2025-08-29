@@ -6,6 +6,7 @@
   <title>Articles · FMRD</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/img/fmrd-logo.png">
+  <meta name="description" content="All articles in Frontiers in Multidisciplinary Research and Development, including Early Access papers.">
 </head>
 <body>
 <header class="site-header">
@@ -37,36 +38,57 @@
 </header>
 
 <main class="wrap">
+  <!-- Early Access -->
   <section class="card">
     <h1>Early Access (Online First)</h1>
     <ul class="list list--articles">
-      <li>
+      <li data-date="2025-08-20" data-year="2025" data-type="Original Research">
+        <!-- Link to a placeholder until the article page exists -->
         <a href="articles/article-template.html">Unsupervised genetic subgroup discovery in dyslexia via UMAP–HDBSCAN</a>
         <span class="list__meta">Accepted 20 Aug 2025 • doi:10.xxxx/fmrd.2025.00004</span>
       </li>
-      <li>
+      <li data-date="2025-08-14" data-year="2025" data-type="Application">
         <a href="articles/article-template.html">A hearing-functions web app to support graph interpretation</a>
         <span class="list__meta">Accepted 14 Aug 2025 • doi:10.xxxx/fmrd.2025.00005</span>
       </li>
     </ul>
   </section>
 
+  <!-- Search / Filters -->
   <section class="card">
-    <h2>All Articles</h2>
-    <ul class="list list--articles">
-      <li>
-        <a href="articles/article-template.html">A topology-guided early-warning framework for epidemic peaks</a>
-        <span class="list__meta">Vol 1(1) • 2025 • doi:10.xxxx/fmrd.2025.00001</span>
+    <div class="section-head" style="gap:1rem; align-items:flex-end;">
+      <div>
+        <h2>All Articles</h2>
+        <p class="section-sub">Newest first · Filter by title or year</p>
+      </div>
+      <form id="filters" class="search" role="search" aria-label="Filter articles" onsubmit="return false;">
+        <label for="q" class="sr-only">Search articles</label>
+        <input id="q" name="q" type="search" placeholder="Search by title…" autocomplete="off">
+        <label for="year" class="sr-only">Filter by year</label>
+        <select id="year" name="year" aria-label="Filter by year">
+          <option value="">All years</option>
+          <!-- Options auto-filled by script -->
+        </select>
+      </form>
+    </div>
+
+    <ul id="all-articles" class="list list--articles">
+      <!-- Use real article pages where available -->
+      <li data-date="2025-08-15" data-year="2025" data-type="Original Research">
+        <a href="articles/v1i1/fmrd-2025-00001/">A topology-guided early-warning framework for epidemic peaks</a>
+        <span class="list__meta">15 Aug 2025 • Vol 1(1) • doi:10.xxxx/fmrd.2025.00001</span>
       </li>
-      <li>
-        <a href="articles/article-template.html">Grey models with persistence-landscape features</a>
-        <span class="list__meta">Vol 1(1) • 2025 • doi:10.xxxx/fmrd.2025.00002</span>
+      <li data-date="2025-08-08" data-year="2025" data-type="Original Research">
+        <a href="articles/v1i1/fmrd-2025-00002/">Grey models with persistence-landscape features</a>
+        <span class="list__meta">08 Aug 2025 • Vol 1(1) • doi:10.xxxx/fmrd.2025.00002</span>
       </li>
-      <li>
-        <a href="articles/article-template.html">STEM career interests and pathway intentions</a>
-        <span class="list__meta">Vol 1(1) • 2025 • doi:10.xxxx/fmrd.2025.00003</span>
+      <li data-date="2025-08-01" data-year="2025" data-type="Education">
+        <a href="articles/v1i1/fmrd-2025-00003/">STEM career interests and pathway intentions</a>
+        <span class="list__meta">01 Aug 2025 • Vol 1(1) • doi:10.xxxx/fmrd.2025.00003</span>
       </li>
     </ul>
+
+    <p id="no-results" style="display:none;margin-top:.75rem;">No matching articles.</p>
   </section>
 </main>
 
@@ -95,7 +117,57 @@
     </div>
   </div>
   <div class="wrap footer-note"><p>© <span id="year"></span> FMRD • CC BY 4.0</p></div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <script>
+    // Year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Auto-sort by date (desc), populate year filter, and enable filtering.
+    (function(){
+      const ul = document.getElementById('all-articles');
+      const items = Array.from(ul.children);
+
+      // Sort by data-date descending (YYYY-MM-DD)
+      items.sort((a,b)=> (b.dataset.date||'').localeCompare(a.dataset.date||''));
+      items.forEach(li => ul.appendChild(li));
+
+      // Populate year dropdown from items
+      const years = Array.from(new Set(items.map(li => li.dataset.year))).sort((a,b)=>b.localeCompare(a));
+      const yearSel = document.getElementById('year');
+      years.forEach(y => {
+        if (!y) return;
+        const opt = document.createElement('option');
+        opt.value = y; opt.textContent = y;
+        yearSel.appendChild(opt);
+      });
+
+      // Read ?q= from URL (e.g., from homepage search)
+      const params = new URLSearchParams(window.location.search);
+      const qInput = document.getElementById('q');
+      const noRes = document.getElementById('no-results');
+      if (params.get('q')) qInput.value = params.get('q');
+
+      function applyFilters(){
+        const q = qInput.value.trim().toLowerCase();
+        const year = yearSel.value;
+        let shown = 0;
+
+        items.forEach(li => {
+          const title = (li.querySelector('a')?.textContent || '').toLowerCase();
+          const inQ = !q || title.includes(q);
+          const inYear = !year || li.dataset.year === year;
+          const show = inQ && inYear;
+          li.style.display = show ? '' : 'none';
+          if (show) shown++;
+        });
+
+        noRes.style.display = shown ? 'none' : '';
+      }
+
+      qInput.addEventListener('input', applyFilters);
+      yearSel.addEventListener('change', applyFilters);
+      applyFilters();
+    })();
+  </script>
 </footer>
 </body>
 </html>
