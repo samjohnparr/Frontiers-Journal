@@ -5,20 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>A topology-guided early-warning framework for epidemic peaks · FMRD</title>
   <meta name="description" content="FMRD V1 I1: topology-guided early-warning framework using persistent homology (IMRAD).">
+
+  <!-- Site assets -->
   <link rel="stylesheet" href="../../../assets/css/styles.css">
   <link rel="icon" href="../../../assets/img/fmrd-logo.png">
 
-  <!-- Structured data -->
+  <!-- Canonical URL (stable landing page for this article) -->
+  <link rel="canonical" href="https://samjohnparr.github.io/Frontiers-Journal/articles/v1i1/fmrd-2025-00001/">
+  <!-- Helpful for crawlers: direct PDF hint -->
+  <link rel="alternate" type="application/pdf" href="https://samjohnparr.github.io/Frontiers-Journal/articles/v1i1/fmrd-2025-00001/fmrd-2025-00001.pdf">
+
+  <!-- Highwire / Google Scholar meta tags -->
+  <meta name="citation_title" content="A topology-guided early-warning framework for epidemic peaks in tropical settings">
+  <meta name="citation_author" content="Trisha Kim Lanticse">
+  <meta name="citation_author" content="Daisy Comighod">
+  <meta name="citation_author" content="Handell Kyle Aclao">
+  <meta name="citation_author" content="Samuel John E. Parreño">
+  <meta name="citation_author_institution" content="Department of Mathematics and Statistics, University of Southern Mindanao, Philippines">
+  <meta name="citation_author_institution" content="Department of Health, Epidemiology Unit, Philippines">
+  <meta name="citation_author_institution" content="School of Applied Mathematics and Data Science, Digos City, Philippines">
+  <meta name="citation_publication_date" content="2025/08/15">
+  <meta name="citation_journal_title" content="Frontiers in Multidisciplinary Research and Development">
+  <meta name="citation_volume" content="1">
+  <meta name="citation_issue" content="1">
+  <!-- Add these if/when you assign pages; otherwise omit -->
+  <!-- <meta name="citation_firstpage" content="1"> -->
+  <!-- <meta name="citation_lastpage" content="12"> -->
+  <meta name="citation_pdf_url" content="https://samjohnparr.github.io/Frontiers-Journal/articles/v1i1/fmrd-2025-00001/fmrd-2025-00001.pdf">
+  <meta name="citation_language" content="en">
+  <meta name="citation_keywords" content="early warning signals; persistent homology; persistence landscapes; dengue; measles; COVID-19; tropical epidemiology">
+  <meta name="citation_abstract" content="Early warning signals (EWS) can anticipate critical transitions in infectious-disease time series. We integrate topological data analysis with classical indicators to detect pre-peak regimes, showing improved F1 and lead time in dengue, measles, and COVID-19 datasets from 2012–2024.">
+
+  <!-- When you have a real DOI, UNCOMMENT the next line and set the value exactly -->
+  <!-- <meta name="citation_doi" content="10.xxxx/fmrd.2025.00001"> -->
+
+  <!-- Structured data (nice for general SEO; Scholar doesn’t rely on it).
+       Keep identifier as the PDF URL for now; add DOI later if minted. -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"ScholarlyArticle",
     "name":"A topology-guided early-warning framework for epidemic peaks in tropical settings",
     "author":[
-      {"@type":"Person","name":"T. Lanticse"},
-      {"@type":"Person","name":"D. Comighod"},
-      {"@type":"Person","name":"H.K. Aclao"},
-      {"@type":"Person","name":"S.J.E. Parreño"}
+      {"@type":"Person","name":"Trisha Kim Lanticse"},
+      {"@type":"Person","name":"Daisy Comighod"},
+      {"@type":"Person","name":"Handell Kyle Aclao"},
+      {"@type":"Person","name":"Samuel John E. Parreño"}
     ],
     "datePublished":"2025-08-15",
     "isPartOf":{
@@ -27,7 +59,7 @@
       "datePublished":"2025",
       "isPartOf":{"@type":"PublicationVolume","volumeNumber":"1","name":"FMRD"}
     },
-    "identifier":"doi:10.xxxx/fmrd.2025.00001",
+    "identifier":"https://samjohnparr.github.io/Frontiers-Journal/articles/v1i1/fmrd-2025-00001/fmrd-2025-00001.pdf",
     "url":"https://samjohnparr.github.io/Frontiers-Journal/articles/v1i1/fmrd-2025-00001/",
     "license":"https://creativecommons.org/licenses/by/4.0/"
   }
@@ -56,7 +88,7 @@
         <li><a href="../../../for-authors.html">For Authors</a></li>
         <li><a href="../../../news.html">News</a></li>
         <li><a href="../../../archive.html">Archive</a></li>
-        <li><a class="btn btn--primary" href="https://example-ojs.org/index.php/fmrd/about/submissions" target="_blank" rel="noopener">Submit Manuscript</a></li>
+        <li><a class="btn btn--primary" href="../../../submit.html">Submit Manuscript</a></li>
       </ul>
     </nav>
   </div>
@@ -66,44 +98,37 @@
   <!-- Minimal breadcrumb -->
   <nav aria-label="Breadcrumb" class="breadcrumb">
     <a href="../../../articles.html">Articles</a> /
-    <a href="../">Volume 1 Issue 1</a> /
+    <a href="../index.html">Volume 1 Issue 1</a> /
     <span aria-current="page">fmrd-2025-00001</span>
   </nav>
 
   <!-- Article header -->
   <article class="card article-hero">
     <h1>A topology-guided early-warning framework for epidemic peaks in tropical settings</h1>
-    <p class="article-card__meta">Original Research • 15 Aug 2025 • <span class="doi">doi:10.xxxx/fmrd.2025.00001</span></p>
+    <p class="article-card__meta">
+      Original Research • 15 Aug 2025
+      <!-- When DOI is live, UNCOMMENT the next bit to display it -->
+      <!-- • <span class="doi"><a href="https://doi.org/10.xxxx/fmrd.2025.00001">https://doi.org/10.xxxx/fmrd.2025.00001</a></span> -->
+    </p>
     <p class="article-card__authors"><strong>T. Lanticse</strong>; <strong>D. Comighod</strong>; <strong>H.K. Aclao</strong>; <strong>S.J.E. Parreño</strong></p>
-    <p>^1 Department of Mathematics and Statistics, University of Southern Mindanao, Philippines<br>
-       ^2 Department of Health, Epidemiology Unit, Philippines<br>
-       ^3 School of Applied Mathematics and Data Science, Digos City, Philippines</p>
+    <p>
+      ^1 Department of Mathematics and Statistics, University of Southern Mindanao, Philippines<br>
+      ^2 Department of Health, Epidemiology Unit, Philippines<br>
+      ^3 School of Applied Mathematics and Data Science, Digos City, Philippines
+    </p>
 
-    <div class="btn-row">
+    <div class="btn-row btn-row--center">
       <a class="btn" href="fmrd-2025-00001.pdf">Download PDF</a>
       <a class="btn btn--ghost" href="../index.html">Back to Volume 1 Issue 1</a>
     </div>
   </article>
 
-  <!-- Large, scrollable PDF viewer -->
-  <div class="pdf-embed">
-    <iframe
-      src="fmrd-2025-00001.pdf#view=FitH"
-      title="Article PDF"
-      loading="lazy">
-    </iframe>
-  </div>
-
   <!-- IMRAD content -->
   <article class="card">
     <h2>Abstract</h2>
-
     <p><strong>Background:</strong> Early warning signals (EWS) can anticipate critical transitions in infectious-disease time series, yet their performance in tropical settings with multi-annual forcing and reporting noise remains mixed. </p>
-
     <p><strong>Methods:</strong> We integrate topological data analysis (TDA) with classical indicators to detect pre-peak regimes. Sliding windows are transformed into delay-embedded point clouds; we compute persistence diagrams and summarize them via persistence landscapes. Features are combined with variance, autocorrelation at lag-1, skewness, and spectral ratio, then classified by gradient boosting. We evaluate dengue, measles, and COVID-19 surveillance data from 2012–2024 across multiple regions. </p>
-
     <p><strong>Results:</strong> TDA-enriched models improved F1 by 0.11–0.19 over classical EWS, with median lead times of 3–6 weeks before observed peaks. Ablations indicate homological features (H1) contribute most to precision at low prevalence. </p>
-
     <p><strong>Conclusions:</strong> Topology-guided EWS can augment operational surveillance by providing earlier, more stable alarms in noisy tropical datasets.</p>
 
     <h2>Keywords</h2>

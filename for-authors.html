@@ -25,13 +25,13 @@
     <nav class="nav" aria-label="Primary">
       <ul>
         <li><a href="aims-scope.html">Aims &amp; Scope</a></li>
-        <li><a href="articles/v1i1/index.html">Current Issue</a></li><!-- change to current-issue.html if you renamed -->
+        <li><a href="articles/v1i1/v1i1.html">Current Issue</a></li>
         <li><a href="articles.html">Articles</a></li>
         <li><a href="editorial-board.html">Editorial Board</a></li>
         <li><a href="for-authors.html" aria-current="page">For Authors</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="archive.html">Archive</a></li>
-        <li><a class="btn btn--primary" href="https://example-ojs.org/index.php/fmrd/about/submissions" target="_blank" rel="noopener">Submit Manuscript</a></li>
+        <li><a class="btn btn--primary" href="submit.html">Submit Manuscript</a></li>
       </ul>
     </nav>
   </div>
@@ -45,12 +45,19 @@
       <li>Include abstract (200–300 words), 3–6 keywords, ethical approvals (if applicable), and funding disclosure.</li>
       <li>Provide a data/code availability statement and deposit materials in OSF, Zenodo, or GitHub.</li>
       <li>Ensure figures/tables are high-quality (vector preferred) and have descriptive captions.</li>
-      <li>Submit via OJS: <a href="https://example-ojs.org/index.php/fmrd/about/submissions" target="_blank" rel="noopener">Submit Manuscript</a>.</li>
+      <li>Submit via Email: <a href="https://example-ojs.org/index.php/fmrd/about/submissions" target="_blank" rel="noopener">Submit Manuscript</a>.</li>
     </ol>
-    <div class="btn-row">
-      <a class="btn" href="#">Download Manuscript Template (DOCX)</a>
-      <a class="btn" href="#">Download Reference Style Guide (PDF)</a>
+
+    <div class="btn-row btn-row--center">
+      <!-- Put the DOCX here: assets/templates/FMRD_Styled_Manuscript_Template.docx -->
+      <a class="btn"
+         href="assets/templates/FMRD_Styled_Manuscript_Template.docx"
+         download="FMRD_Manuscript_Template.docx">Download Manuscript Template (DOCX)</a>
     </div>
+
+    <p class="note" style="margin-top:.75rem;font-size:.95rem;color:var(--muted,#6b7280);">
+      Tip: On some mobile browsers, the file may open in a viewer instead of downloading. Desktop browsers generally download when the <code>download</code> attribute is present.
+    </p>
   </section>
 
   <section class="card">
