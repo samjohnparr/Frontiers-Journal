@@ -4,23 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Frontiers in Multidisciplinary Research and Development</title>
-  <meta name="description" content="Frontiers in Multidisciplinary Research and Development (FMRD) is a peer-reviewed open access journal publishing rigorous research across science, engineering, health, social sciences, and the humanities.">
+
+  <!-- Meta description tuned to new Aims & Scope -->
+  <meta name="description" content="FMRD is a peer-reviewed, open-access journal dedicated to theoretical, methodological, and applied research in Mathematics, Statistics, Data Science & Computing; Environmental Science; Education; and the Social Sciences. Article types include Original Research, Reviews, Short Communications, Methods/Software Notes, Registered Reports, and Data Papers.">
+
   <link rel="preload" href="assets/css/styles.css" as="style">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/img/fmrd-logo.png">
+
+  <!-- Social cards -->
   <meta property="og:title" content="Frontiers in Multidisciplinary Research and Development">
-  <meta property="og:description" content="Peer-reviewed open access journal spanning science, engineering, health, social sciences, and the humanities.">
+  <meta property="og:description" content="Peer-reviewed open access journal focusing on Mathematics, Statistics, Data Science & Computing; Environmental Science; Education; and the Social Sciences.">
   <meta property="og:image" content="assets/img/fmrd-logo.png">
   <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured data for the journal (Periodical) -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Periodical",
-    "name":"Frontiers in Multidisciplinary Research and Development",
-    "issn":"XXXX-XXXX",
-    "publisher":{"@type":"Organization","name":"Frontiers in Multidisciplinary Research and Development Press","url":"https://samjohnparr.github.io/Frontiers-Journal/"},
-    "url":"https://samjohnparr.github.io/Frontiers-Journal/",
-    "isAccessibleForFree":true
+    "@context": "https://schema.org",
+    "@type": "Periodical",
+    "name": "Frontiers in Multidisciplinary Research and Development",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FMRD Press",
+      "url": "https://samjohnparr.github.io/Frontiers-Journal/"
+    },
+    "url": "https://samjohnparr.github.io/Frontiers-Journal/",
+    "isAccessibleForFree": true
+    /* When ISSN is assigned, add: "issn": "XXXX-XXXX" */
   }
   </script>
 </head>
@@ -58,14 +69,22 @@
   <section class="hero">
     <div class="wrap">
       <h1>Advancing rigorous, cross-disciplinary research</h1>
-      <p>FMRD publishes original research, reviews, short communications, and registered reports across science, engineering, health, social sciences, and the humanities.</p>
+      <p>
+        FMRD publishes high-quality theoretical, methodological, and applied work across
+        <strong>Mathematics, Statistics, Data Science &amp; Computing</strong>;
+        <strong>Environmental Science</strong>;
+        <strong>Education</strong>; and the
+        <strong>Social Sciences</strong>.
+        Article types include Original Research, Reviews, Short Communications, Methods/Software Notes,
+        Registered Reports, and Data Papers.
+      </p>
       <form class="search" role="search" aria-label="Site search" action="articles.html" method="get">
         <label for="q" class="sr-only">Search articles</label>
         <input id="q" name="q" type="search" placeholder="Search articles, authors, keywords…" autocomplete="off">
         <button type="submit" class="btn">Search</button>
       </form>
       <div class="meta">
-        <span>ISSN: <strong>XXXX-XXXX</strong></span>
+        <span>ISSN: <strong>On process</strong></span>
         <span>DOI prefix: <strong>On process</strong></span>
         <span>Frequency: <strong>Quarterly publication</strong></span>
         <span>APC: <strong>None</strong></span>
@@ -76,7 +95,13 @@
   <main id="main" class="wrap">
     <section class="card">
       <h2>Aims &amp; Scope</h2>
-      <p>FMRD advances rigorous, open research across mathematics & data science, engineering & technology, health & life sciences, environmental sciences, education, economics & social sciences, arts & humanities, and policy studies.</p>
+      <p>
+        FMRD welcomes rigorous contributions in <strong>Mathematics, Statistics, Data Science &amp; Computing</strong>;
+        <strong>Environmental Science</strong>; <strong>Education</strong>; and the
+        <strong>Social Sciences</strong>—spanning theory, methods, and applications.
+        We encourage interdisciplinary work bridging these areas (e.g., environmental data science, learning analytics,
+        social epidemiology).
+      </p>
       <p><a class="btn btn--ghost" href="aims-scope.html">Read full Aims &amp; Scope →</a></p>
     </section>
 
@@ -116,14 +141,12 @@
           <li>
             <strong>Call for Papers:</strong> <em>Inaugural Issue (Volume 1 • 2025)</em><br>
             We welcome submissions in <strong>Mathematics, Statistics, Data Science &amp; Computing; Environmental Science; Education; and the Social Sciences</strong>.
-
             <ul class="kv" style="margin-top:.5rem">
               <li><span>Deadline</span><span>31 Dec 2025</span></li>
               <li><span>Article types</span><span>Original Research • Review • Short Communication • Methods/Software Notes • Registered Reports • Data Papers</span></li>
               <li><span>Open access</span><span>CC BY 4.0 • No APCs</span></li>
               <li><span>Publication</span><span>Rolling online upon acceptance</span></li>
             </ul>
-
             <div class="btn-row" style="margin-top:.5rem">
               <a class="btn btn--primary" href="submit.html">Submit manuscript</a>
               <a class="btn btn--ghost" href="for-authors.html">Author guidelines</a>
