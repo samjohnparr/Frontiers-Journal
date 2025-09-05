@@ -104,9 +104,20 @@ main.wrap{ display:grid; grid-template-columns: 1fr; gap:20px; margin:24px auto 
   background:#fff; border:1px solid var(--border); border-radius:var(--radius);
   padding:16px; box-shadow:var(--shadow);
 }
-.grid{ display:grid; gap:16px }
-.grid--3{ grid-template-columns:1fr; }
-@media (min-width: 760px){ .grid--3{ grid-template-columns:repeat(3,1fr) } }
+.grid { display:grid; gap:16px }
+
+/* 2-up */
+.grid--2 { grid-template-columns: 1fr; }
+@media (min-width:760px){ .grid--2 { grid-template-columns: repeat(2,1fr) } }
+
+/* 3-up (your existing) */
+.grid--3 { grid-template-columns: 1fr; }
+@media (min-width:760px){ .grid--3 { grid-template-columns: repeat(3,1fr) } }
+
+/* 4-up */
+.grid--4 { grid-template-columns: 1fr; }
+@media (min-width:760px){ .grid--4 { grid-template-columns: repeat(4,1fr) } }
+
 
 .bullets{ margin:.4rem 0 0 1rem }
 .bullets li{ margin:.2rem 0 }
@@ -223,4 +234,31 @@ main.wrap{ display:grid; grid-template-columns: 1fr; gap:20px; margin:24px auto 
 @media (max-width: 520px) {
   .person { grid-template-columns: 1fr; }
   .people__role { justify-self: start; }
+}
+
+/* Justify the abstract text only */
+.abstract{
+  text-align: justify;
+  text-justify: inter-word;  /* some browsers */
+  hyphens: auto;             /* enable hyphenation */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+/* References: justify text, add hanging indent, and wrap long DOIs/URLs */
+.refs{
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+.refs li{
+  margin-bottom: .5rem;
+  padding-left: 1.4rem;   /* space for the number */
+  text-indent: -1.4rem;   /* hanging indent */
+}
+.refs a{
+  overflow-wrap: anywhere; /* lets very long links break nicely */
+  word-break: break-word;  /* broad support fallback */
 }
